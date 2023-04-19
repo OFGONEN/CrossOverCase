@@ -9,6 +9,7 @@ public class StackPiece : MonoBehaviour
 {
 #region Fields
     public GameSettings game_settings;
+    public EventListenerDelegateResponse event_listener_testStack;
 
   [ Header( "Components" ) ]
     public MeshRenderer meshRenderer;
@@ -24,6 +25,10 @@ public class StackPiece : MonoBehaviour
 #endregion
 
 #region Unity API
+    private void OnDisable()
+    {
+		event_listener_testStack.OnDisable();
+	}
 #endregion
 
 #region API
@@ -32,6 +37,9 @@ public class StackPiece : MonoBehaviour
 		transform.parent        = parent;
 		transform.localPosition = position;
 		transform.eulerAngles   = rotation;
+
+		event_listener_testStack.OnEnable();
+		event_listener_testStack.response = OnTestMyStackModeResponse;
 
 		stack_info = stackInfo;
 
@@ -45,6 +53,19 @@ public class StackPiece : MonoBehaviour
 				break;
 		}
 	}
+
+    public void OnTestMyStackModeResponse()
+    {
+        if( stack_info.mastery == 0 )
+        {
+			gameObject.SetActive( false );
+		}
+        else
+        {
+			rigidBody.isKinematic = false;
+			rigidBody.useGravity  = true;
+		}
+    }
 #endregion
 
 #region Implementation
