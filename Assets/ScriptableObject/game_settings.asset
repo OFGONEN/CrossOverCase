@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769cc2c4bb7444d839e49cac68e3415e, type: 3}
   m_Name: game_settings
   m_EditorClassIdentifier: 
-  stack_offset: 5
+  stack_offset: 7
   stack_piece_offset_vertical: 1
   stack_piece_offset_horizontal: 1.05
   stack_piece_placement_mod: 3
@@ -20,11 +20,14 @@ MonoBehaviour:
   stack_piece_glass_physicMaterial: {fileID: 13400000, guid: ea954cf82855b439283db1fc83f53869, type: 2}
   stack_piece_glass_mass: 1
   stack_piece_glass_text: 
+  stack_piece_glass_text_color: {r: 0, g: 0, b: 0, a: 1}
   stack_piece_wood_material: {fileID: 2100000, guid: d3ebcf189dec644cbae9c86497b0ec7f, type: 2}
   stack_piece_wood_physicMaterial: {fileID: 13400000, guid: 682a3de08488943ddbf4af409f9a6811, type: 2}
   stack_piece_wood_mass: 1
   stack_piece_wood_text: learned
+  stack_piece_wood_text_color: {r: 0, g: 0, b: 0, a: 1}
   stack_piece_stone_material: {fileID: 2100000, guid: e09bc2153c4e7430982826f3887b15a4, type: 2}
   stack_piece_stone_physicMaterial: {fileID: 13400000, guid: 8fc8b0916ad854cf0bbf85b16f6a8176, type: 2}
   stack_piece_stone_mass: 1
   stack_piece_stone_text: mastered
+  stack_piece_stone_text_color: {r: 0, g: 0, b: 0, a: 1}
