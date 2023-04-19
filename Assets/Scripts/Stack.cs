@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Stack : MonoBehaviour
 {
 	public GameSettings game_settings;
 	public StackPiece stack_piece_prefab;
+	public TextMeshProUGUI textRenderer;
 
 	Vector3 stack_piece_placement_rotation;
 	Vector3 stack_piece_placement_point;
@@ -16,6 +18,8 @@ public class Stack : MonoBehaviour
 
 	public void CreateTheStack( List< StackInfo > stackInfoList )
     {
+		textRenderer.text = stackInfoList[ 0 ].grade;
+
 		float stackPieceVerticalPosition = 0;
 
 		stack_piece_placement_rotation = Vector3.zero;
