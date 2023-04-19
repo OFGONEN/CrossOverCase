@@ -18,16 +18,19 @@ public class GameSettings : ScriptableObject
     public PhysicMaterial stack_piece_glass_physicMaterial;
     public float stack_piece_glass_mass;
     public string stack_piece_glass_text;
+    public Color stack_piece_glass_text_color;
 
   [ Header( "Stack Piece Wood Settings" ) ]
     public Material stack_piece_wood_material;
     public PhysicMaterial stack_piece_wood_physicMaterial;
     public float stack_piece_wood_mass;
     public string stack_piece_wood_text;
+    public Color stack_piece_wood_text_color;
 
   [ Header( "Stack Piece Stone Settings" ) ]
     public Material stack_piece_stone_material;
     public PhysicMaterial stack_piece_stone_physicMaterial;
     public float stack_piece_stone_mass;
     public string stack_piece_stone_text;
+    public Color stack_piece_stone_text_color;
 }
