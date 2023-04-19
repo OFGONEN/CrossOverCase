@@ -11,7 +11,9 @@ public class StackCreator : ScriptableObject
 
     List< Stack > stack_list;
 
-    public void CreateStacks()
+	public int StackCount => stack_list.Count;
+
+	public void CreateStacks()
     {
 		var stackInfoDictionary = stack_info_loader.StackInfoDictionary;
 
@@ -36,5 +38,11 @@ public class StackCreator : ScriptableObject
         {
 			stack_list[ i ].transform.position = startingPoint + game_settings.stack_offset * Vector3.right * i;
 		}
+	}
+
+	public Vector3 GetStackPosition( int index )
+	{
+		int safeIndex = index % stack_list.Count;
+		return stack_list[ safeIndex ].transform.position;
 	}
 }
