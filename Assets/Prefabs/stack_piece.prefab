@@ -488,6 +488,7 @@ MonoBehaviour:
   game_settings: {fileID: 11400000, guid: 7f60e83f677474363ab29a97f6299c9d, type: 2}
   event_listener_testStack:
     gameEvent: {fileID: 11400000, guid: ddbb2e92555504d89994de2d6d41848a, type: 2}
+  gameEvent_blockInfo: {fileID: 11400000, guid: 690e51bfcb53d437b8c76765112708c9, type: 2}
   meshRenderer: {fileID: 8546531841734608833}
   textRenderer_left: {fileID: 6552140634033060049}
   textRenderer_right: {fileID: 2444257552489084117}

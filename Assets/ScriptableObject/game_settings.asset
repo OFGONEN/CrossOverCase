@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: game_settings
   m_EditorClassIdentifier: 
   camera_offset: {x: 0, y: 8, z: -20}
+  camera_rotate_speed: 0.5
+  camera_rotate_clamp: 30
   stack_offset: 7
   stack_piece_offset_vertical: 1
   stack_piece_offset_horizontal: 1.05

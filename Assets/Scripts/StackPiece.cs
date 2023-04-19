@@ -1,5 +1,3 @@
-/* Created by and for usage of FF Studios (2021). */
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +5,9 @@ using TMPro;
 
 public class StackPiece : MonoBehaviour
 {
-#region Fields
     public GameSettings game_settings;
     public EventListenerDelegateResponse event_listener_testStack;
+    public BlockInfoGameEvent gameEvent_blockInfo;
 
   [ Header( "Components" ) ]
     public MeshRenderer meshRenderer;
@@ -19,19 +17,17 @@ public class StackPiece : MonoBehaviour
 	public Collider collider;
 
 	StackInfo stack_info;
-#endregion
 
-#region Properties
-#endregion
-
-#region Unity API
     private void OnDisable()
     {
 		event_listener_testStack.OnDisable();
 	}
-#endregion
 
-#region API
+    public void OnMouseDown()
+    {
+		gameEvent_blockInfo.Raise( stack_info.grade, stack_info.domain, stack_info.cluster, stack_info.standarddescription );
+	}
+
     public void Spawn( Transform parent, Vector3 position, Vector3 rotation, StackInfo stackInfo )
     {
 		transform.parent        = parent;
@@ -66,9 +62,7 @@ public class StackPiece : MonoBehaviour
 			rigidBody.useGravity  = true;
 		}
     }
-#endregion
 
-#region Implementation
     void SpawnAsGlass()
     {
 		meshRenderer.sharedMaterial = game_settings.stack_piece_glass_material;
@@ -101,10 +95,4 @@ public class StackPiece : MonoBehaviour
 		collider.sharedMaterial     = game_settings.stack_piece_stone_physicMaterial;
 		rigidBody.mass              = game_settings.stack_piece_stone_mass;    
     }
-#endregion
-
-#region Editor Only
-#if UNITY_EDITOR
-#endif
-#endregion
 }
