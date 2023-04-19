@@ -5,6 +5,11 @@ using UnityEngine;
 [ CreateAssetMenu( fileName = "game_settings", menuName = "ScriptableObjects/Game Settings" )]
 public class GameSettings : ScriptableObject
 {
+  [ Header( "Camera Settings" ) ]
+    public Vector3 camera_offset;
+    public float camera_rotate_speed;
+    public float camera_rotate_clamp;
+
   [ Header( "Stack Settings" ) ]
     public float stack_offset;
 

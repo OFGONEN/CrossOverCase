@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769cc2c4bb7444d839e49cac68e3415e, type: 3}
   m_Name: game_settings
   m_EditorClassIdentifier: 
+  camera_offset: {x: 0, y: 8, z: -20}
   stack_offset: 7
   stack_piece_offset_vertical: 1
   stack_piece_offset_horizontal: 1.05
