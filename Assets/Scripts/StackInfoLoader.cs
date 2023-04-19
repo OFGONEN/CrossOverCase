@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using UnityEngine;
 
-[ CreateAssetMenu( fileName = "stack_info_loader", menuName = "ScriptableObjects/StackInfoLoader" )]
+[ CreateAssetMenu( fileName = "stack_info_loader", menuName = "ScriptableObjects/Stack Info Loader" )]
 public class StackInfoLoader : ScriptableObject
 {
 	Dictionary< string, List< StackInfo > > stack_info_dictionary;
