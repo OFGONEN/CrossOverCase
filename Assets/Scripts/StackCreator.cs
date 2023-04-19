@@ -30,7 +30,7 @@ public class StackCreator : ScriptableObject
 
     public void PositionStacks()
     {
-		var startingPoint = Vector3.left * ( stack_list.Count - 1 ) / 2f;
+		var startingPoint = Vector3.left * ( stack_list.Count - 1 ) / 2f * game_settings.stack_offset;
 
         for( var i = 0; i < stack_list.Count; i++ )
         {
