@@ -11,4 +11,16 @@ public class GameEvent : ScriptableObject
 		for( int i = event_listeners.Count - 1; i >= 0; i-- )
 			event_listeners[ i ].OnEventRaised();
 	}
+
+	public void RegisterListener( EventListener listener )
+	{
+		if( !event_listeners.Contains( listener ) )
+			event_listeners.Add( listener );
+	}
+
+	public void UnregisterListener( EventListener listener )
+	{
+		if( event_listeners.Contains( listener ) )
+			event_listeners.Remove( listener );
+	}
 }
