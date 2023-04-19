@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d27f633c8e5c4a98a7b5e7669966492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_settings: {fileID: 11400000, guid: 7f60e83f677474363ab29a97f6299c9d, type: 2}
+  stack_piece_prefab: {fileID: -4363120990247661040, guid: ac2125113307b42fe93d59f060c161be, type: 3}
