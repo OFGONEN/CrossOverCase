@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f508a0aa5334f19a29cb232521321d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stack_info_loader: {fileID: 0}
-  stack_creator: {fileID: 0}
+  stack_info_loader: {fileID: 11400000, guid: 04b20bae71ac34fd49e6d8f99d39878b, type: 2}
+  stack_creator: {fileID: 11400000, guid: 2d970e89003474e37bd337f1848a87bd, type: 2}
 --- !u!4 &1018606615
 Transform:
   m_ObjectHideFlags: 0

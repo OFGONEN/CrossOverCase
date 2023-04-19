@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769cc2c4bb7444d839e49cac68e3415e, type: 3}
   m_Name: game_settings
   m_EditorClassIdentifier: 
-  stack_offset: 0
+  stack_offset: 1
