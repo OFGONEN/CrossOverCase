@@ -8,6 +8,7 @@ using UnityEngine;
 [ CreateAssetMenu( fileName = "stack_info_loader", menuName = "ScriptableObjects/Stack Info Loader" )]
 public class StackInfoLoader : ScriptableObject
 {
+	public string stack_info_load_url;
 	Dictionary< string, List< StackInfo > > stack_info_dictionary;
 
 	public Dictionary< string, List< StackInfo > > StackInfoDictionary => stack_info_dictionary; 
@@ -16,7 +17,8 @@ public class StackInfoLoader : ScriptableObject
     {
 		// Get the Stack Info using the given API
 		HttpWebRequest webRequest = ( HttpWebRequest )WebRequest.Create
-( string.Format( "https://ga1vqcu3o1.execute-api.us-east-1.amazonaws.com/Assessment/stack" ) );
+			( string.Format( stack_info_load_url ) );
+
 		webRequest.Method = "GET";
 
 		HttpWebResponse webResponse  = ( HttpWebResponse )webRequest.GetResponse();

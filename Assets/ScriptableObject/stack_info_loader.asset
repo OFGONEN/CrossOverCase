@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ab900a23f114b308fe99b7cac266c8, type: 3}
   m_Name: stack_info_loader
   m_EditorClassIdentifier: 
+  stack_info_load_url: https://ga1vqcu3o1.execute-api.us-east-1.amazonaws.com/Assessment/stack
